@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NexusModding</title>
+    <title>Nexus Modding</title>
     <style>
         body {
             background-color: black;
@@ -24,46 +24,53 @@
 
         .box {
             background-color: white;
-            padding: 40px;
-            border-radius: 8px;
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+            padding: 60px; /* Increased padding for a bigger look */
+            border-radius: 12px; /* Slightly more rounded corners */
+            box-shadow:
+                5px 5px 15px rgba(0, 0, 0, 0.6), /* Larger, more prominent shadow */
+                -5px -5px 10px rgba(0, 0, 0, 0.3); /* Added a subtle opposite shadow */
             display: flex;
             flex-direction: column;
             align-items: center;
             position: relative;
+            border: 1px solid #ccc; /* Subtle border for added style */
         }
 
         .transparent-button {
-            background-color: transparent;
-            border: 2px solid white;
-            color: white;
-            padding: 15px 30px;
-            font-size: 18px;
+            background-color: rgba(255, 255, 255, 0.1); /* Slightly see-through white */
+            border: 2px solid rgba(0, 0, 0, 0.5); /* Darker, slightly transparent border */
+            color: black;
+            padding: 18px 36px; /* Slightly larger button */
+            font-size: 20px;
             cursor: pointer;
-            border-radius: 5px;
+            border-radius: 8px;
             position: absolute;
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
             z-index: 1;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3); /* Black text shadow */
+            transition: background-color 0.3s ease; /* Smooth hover transition */
         }
 
         .transparent-button:hover {
-            background-color: rgba(255, 255, 255, 0.1);
+            background-color: rgba(255, 255, 255, 0.2); /* Slightly darker on hover */
+            border-color: rgba(0, 0, 0, 0.7);
         }
 
         .button-text {
             color: black;
-            font-size: 16px;
-            margin-top: 20px;
+            font-size: 18px;
+            margin-top: 30px; /* Increased spacing */
             text-align: center;
+            font-style: italic; /* Added some style to the text */
         }
     </style>
 </head>
 <body>
     <div class="container">
         <div class="box">
-            <button class="transparent-button">Click Me</button>
+            <button class="transparent-button">Discord</button>
             <p class="button-text">Lorem Ect*</p>
         </div>
     </div>
