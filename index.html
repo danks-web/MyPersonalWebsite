@@ -10,7 +10,7 @@
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             margin: 0;
             padding: 0;
-            overflow: hidden;
+            /* Remove overflow: hidden; to allow scrolling */
             color: #eee; /* Light text for better contrast */
         }
 
@@ -53,6 +53,7 @@
             position: relative;
             z-index: 1;
             padding: 20px; /* Add some padding around the main content */
+            flex-direction: column; /* Allow content to flow vertically for scrolling */
         }
 
         .box {
@@ -68,6 +69,7 @@
             position: relative;
             border: 1px solid rgba(50, 50, 70, 0.5);
             text-align: center;
+            margin-bottom: 60px; /* Add some space below the box if there's more content */
         }
 
         .logo {
@@ -212,14 +214,14 @@
                 <a href="#" target="_blank" class="social-link"><i class="fab fa-github"></i></a>
             </div>
 
-            <div class="section-title">Key Features</div>
+            <div class="section-title">Features</div>
             <ul class="features-list">
                 <li class="feature-item">Active and Welcoming Community</li>
                 <li class="feature-item">Dedicated Support Channels</li>
                 <li class="feature-item">Exclusive Booster Perks</li>
                 <li class="feature-item">Regular Events and Activities</li>
-                <li class="feature-item">Showcase Your Modding Creations</li>
-                <li class="feature-item">Opportunities for Collaboration</li>
+                <li class="feature-item">Showcase Your Mods</li>
+                <li class="feature-item">Template For Free Use</li>
             </ul>
 
             <div class="cta-section">
@@ -229,6 +231,24 @@
                     <a href="https://discord.gg/Nexusmodding" target="_blank" class="transparent-button">Become a Part of Nexus Modding</a>
                 </div>
             </div>
+        </div>
+
+        <div class="box">
+            <h2 class="section-title">More About Our Community</h2>
+            <ul class="features-list">
+                <li class="feature-item">Friendly and helpful members</li>
+                <li class="feature-item">Tutorials</li>
+                <li class="feature-item">Voice Chats For Help And Support</li>
+            </ul>
+        </div>
+
+        <div class="box">
+            <h2 class="section-title">Upcoming Events</h2>
+            <ul class="features-list">
+                <li class="feature-item">Daily Mods</li>
+                <li class="feature-item">Mod Recruting</li>
+                <li class="feature-item">Free Posting Channels</li>
+            </ul>
         </div>
     </div>
 
